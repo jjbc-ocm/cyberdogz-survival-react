@@ -1,0 +1,10 @@
+{ 
+    "data": [
+        { "id": 1, "name": "Common",    "borderColor": "#808080", "backColor": "#80808099", "src": 173430746, "desc": "Allows item to be upgraded to level 4." },
+        { "id": 2, "name": "Uncommon",  "borderColor": "#00BF00", "backColor": "#00BF0099", "src": 173430751, "desc": "Allows item to be upgraded to level 5."  },
+        { "id": 3, "name": "Rare",      "borderColor": "#0060BF", "backColor": "#0060BF99", "src": 173430748, "desc": "Allows item to be upgraded to level 6." },
+        { "id": 4, "name": "Epic",      "borderColor": "#8000FF", "backColor": "#8000FF99", "src": 173430750, "desc": "Allows item to be upgraded to level 7." },
+        { "id": 5, "name": "Legendary", "borderColor": "#FF8000", "backColor": "#FF800099", "src": 173430749, "desc": "Allows item to be upgraded to level 8." },
+        { "id": 6, "name": "Mythical",  "borderColor": "#FFCC00", "backColor": "#FFCC0099", "src": 173430747, "desc": "Allows item to be automatically unlocked at the beginning of the game." }
+    ]
+}

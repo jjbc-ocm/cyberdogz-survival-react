@@ -1,0 +1,489 @@
+{
+  "data": [
+    {
+      "id": 167066039,
+      "bulletId": 166476826,
+      "iconId": 168529290,
+      "name": "Rifle 1",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 1.2667,
+      "fireRate": 1,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "screen_boomerang": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_duration": 1 }
+      ]
+    },
+    {
+      "id": 171526889,
+      "bulletId": 166476826,
+      "iconId": 168529316,
+      "name": "Rifle 2",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 1.8296,
+      "fireRate": 0.75,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "screen_boomerang": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_duration": 1 }
+      ]
+    },
+    {
+      "id": 171526890,
+      "bulletId": 166476826,
+      "iconId": 168529292,
+      "name": "Rifle 3",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.9627,
+      "fireRate": 1.25,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "screen_boomerang": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_duration": 1 }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": 167156795,
+      "bulletId": 167769803,
+      "iconId": 168529299,
+      "name": "Shotgun 1",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 9.5,
+      "fireRate": 0.5,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "bullet_count": 5, "360_shot": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrel_count": 1 }
+      ]
+    },
+    {
+      "id": 171526891,
+      "bulletId": 167769803,
+      "iconId": 168529295,
+      "name": "Shotgun 2",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 14.3556,
+      "fireRate": 0.375,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "bullet_count": 5, "360_shot": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrel_count": 1 }
+      ]
+    },
+    {
+      "id": 171526892,
+      "bulletId": 167769803,
+      "iconId": 168529311,
+      "name": "Shotgun 3",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 6.992,
+      "fireRate": 0.625,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "bullet_count": 5, "360_shot": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrel_count": 1 }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": 167156796,
+      "bulletId": 167769802,
+      "iconId": 168529297,
+      "name": "SMG 1",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.8125,
+      "fireRate": 4,
+      "spreadAngle": 4,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "barrage_count": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrage_count": 1 }
+      ]
+    },
+    {
+      "id": 171526893,
+      "bulletId": 167769802,
+      "iconId": 168529303,
+      "name": "SMG 2",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 1.1111,
+      "fireRate": 3,
+      "spreadAngle": 4,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "barrage_count": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrage_count": 1 }
+      ]
+    },
+    {
+      "id": 171526894,
+      "bulletId": 167769802,
+      "iconId": 168529301,
+      "name": "SMG 3",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.64,
+      "fireRate": 5,
+      "spreadAngle": 4,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "barrage_count": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrage_count": 1 }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": 167069595,
+      "bulletId": 167769802,
+      "iconId": 168529312,
+      "name": "Pistol 1",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.875,
+      "fireRate": 2,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_nearest": 1, "barrage_count": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrage_count": 1 }
+      ]
+    },
+    {
+      "id": 171526884,
+      "bulletId": 167844135,
+      "iconId": 168529315,
+      "name": "Pistol 2",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 1.6296,
+      "fireRate": 1.5,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_nearest": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_speed": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrel_count": 1 }
+      ]
+    },
+    {
+      "id": 171526885,
+      "bulletId": 167769803,
+      "iconId": 168529309,
+      "name": "Pistol 3",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.646,
+      "fireRate": 2.5,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_nearest": 1, "bullet_count": 5, "360_shot": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pellets": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "barrel_count": 1 }
+      ]
+    },
+    {
+      "id": 171526886,
+      "bulletId": 167773746,
+      "iconId": 168529298,
+      "name": "Pistol 4",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.2771,
+      "fireRate": 2,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_nearest": 1, "bullet_count": 2 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pass_through": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "homing": 1 }
+      ]
+    },
+    {
+      "id": 171526887,
+      "bulletId": 169191494,
+      "iconId": 168529305,
+      "name": "Pistol 5",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.4074,
+      "fireRate": 1.5,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_nearest": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 }
+      ]
+    },
+    {
+      "id": 171526888,
+      "bulletId": 166476826,
+      "iconId": 168529310,
+      "name": "Pistol 6",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 0.2153,
+      "fireRate": 2.5,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_nearest": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "screen_boomerang": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_duration": 1 }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": 167069594,
+      "bulletId": 167773746,
+      "iconId": 168529291,
+      "name": "Launcher 1",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 3.1667,
+      "fireRate": 0.5,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "bullet_count": 2 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pass_through": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "homing": 1 }
+      ]
+    },
+    {
+      "id": 171526882,
+      "bulletId": 167773746,
+      "iconId": 168529306,
+      "name": "Launcher 2",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 4.7852,
+      "fireRate": 0.375,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "bullet_count": 2 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pass_through": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "homing": 1 }
+      ]
+    },
+    {
+      "id": 171526883,
+      "bulletId": 167773746,
+      "iconId": 168529304,
+      "name": "Launcher 3",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 2.3307,
+      "fireRate": 0.625,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "bullet_count": 2 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "pass_through": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "homing": 1 }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": 169271952,
+      "bulletId": 169191494,
+      "iconId": 168529307,
+      "name": "Sniper 1",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 9.3333,
+      "fireRate": 0.25,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 }
+      ]
+    },
+    {
+      "id": 171526895,
+      "bulletId": 169191494,
+      "iconId": 168529300,
+      "name": "Sniper 2",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 14.8148,
+      "fireRate": 0.1875,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 }
+      ]
+    },
+    {
+      "id": 171526896,
+      "bulletId": 169191494,
+      "iconId": 168529314,
+      "name": "Sniper 3",
+      "desc": "Lorem ipsum dolor sit  amet.",
+      "damageRate": 6.6133,
+      "fireRate": 0.3125,
+      "spreadAngle": 0,
+      "upgradesPerLevel": [
+        { "aim_random": 1, "pass_through": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 },
+        { "damage_rate": 1 },
+        { "fire_rate": 1 },
+        { "damage_rate": 1 },
+        { "bullet_size": 1 }
+      ]
+    }
+  ]
+}

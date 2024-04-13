@@ -1,0 +1,526 @@
+
+
+.topbar-ui {
+    padding: 12px;
+}
+
+.topbar-ui .stats-ui {
+    gap: 12px;
+}
+
+.topbar-ui .stat-ui {
+    position: relative;
+    line-height: 24px;
+    padding: 4px;
+    background-color: #313038;
+    border-radius: 16px;
+    flex: 1;
+}
+
+.topbar-ui .stat-ui .add-button {
+    position: absolute;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.topbar-ui .field-ui {
+    padding-top: 8px;
+}
+
+.side-left-buttons {
+    position: absolute;
+    /* width: 52px; */
+    left: 12px;
+    top: 25%;
+    transform: translate(0, -50%);
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.map-intro-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 256px;
+    height: 256px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.play-button {
+    position: absolute;
+    right: 24px;
+    bottom: 88px;
+}
+
+.high-score-ui {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.fullscreen-ui {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #1C1B20;
+    width: 100%;
+    height: calc(100% - 48px);
+    pointer-events: auto;
+    display: none;
+    
+}
+
+.fullscreen-ui .app-bar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #1C1B20;
+    width: 100%;
+    border-bottom: #313038 1px solid;
+    padding: 8px 16px;
+    box-sizing: border-box;
+
+    flex-direction: column; 
+    gap: 8px;
+
+}
+
+.fullscreen-ui .app-bar .row-content-ui {
+    width: 100%;
+}
+
+.fullscreen-ui .app-bar .row-content-ui .tabs-ui {
+    background-color: #24232A;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.fullscreen-ui .app-bar .row-content-ui .tabs-ui .tab-selected-ui {
+    background-color: #775CDF;
+    border-radius: 7px;
+    line-height: 32px;
+}
+
+.fullscreen-ui .app-bar .row-content-ui .tabs-ui .tab-default-ui {
+    line-height: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.leaderboard-items-ui {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 148px);
+    
+    padding: 16px 32px 0px 32px;
+    box-sizing: border-box;
+    place-content: flex-start;
+    overflow-y: auto;
+}
+
+.leaderboard-default-item {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    border-top: 1px solid #313038;
+    padding: 8px 0px;
+}
+
+.leaderboard-default-item:first-child {
+    border-top: none;
+}
+
+.leaderboard-selected-item {
+    position: relative;
+    background-color: #24232A;
+    border-radius: 8px;
+    width: calc(100% + 32px);
+    height: 36px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 8px 0px;
+}
+
+.leaderboard-selected-item + .leaderboard-default-item {
+    border-top: none;
+}
+
+.leaderboard-default-item .rank-text,
+.leaderboard-selected-item .rank-text {
+    position: absolute;
+    width: 32px;
+    line-height: 36px;
+}
+
+.leaderboard-default-item .rank-img,
+.leaderboard-selected-item .rank-img {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 24px;
+    height: 24px;
+}
+
+.leaderboard-default-item .name-text,
+.leaderboard-selected-item .name-text {
+    position: absolute;
+    line-height: 26px;
+    left: 72px;
+    max-width: calc(100% - 128px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.leaderboard-default-item .meta-text,
+.leaderboard-selected-item .meta-text {
+    position: absolute;
+    top: 28px;
+    left: 72px;
+    color: #9F9F9F;
+    font-size: 12px;
+}
+
+.leaderboard-default-item .score-text,
+.leaderboard-selected-item .score-text {
+    position: absolute;
+    line-height: 36px;
+    right: 0px;
+    width: 64px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inventory-ui .body-ui,
+.briefing-ui .body-ui,
+.tournament-ui .body-ui {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: calc(100vh - 148px);
+}
+
+.inventory-ui .body-ui .selected-item-ui {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 256px);
+}
+
+
+
+.inventory-ui .body-ui .selected-item-ui .visibility-ui {
+    display: none;
+}
+
+.inventory-ui .body-ui .left-side-ui {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    width: 100px;
+    transform: translate(0, -50%);
+    text-align: left;
+    line-height: 32px;
+}
+
+.inventory-ui .body-ui .right-side-ui {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    width: 52px;
+    transform: translate(0, -50%);
+    line-height: 64px;
+}
+
+
+.inventory-ui .body-ui .top-side-ui {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: calc(100% - 128px);
+    transform: translate(-50%, 0);
+    /* line-height: 32px; */
+}
+
+.inventory-ui .body-ui .top-side-ui .name-text {
+    font-size: 24px;
+}
+
+.inventory-ui .body-ui .top-side-ui .level-text {
+    padding-bottom: 4px;
+}
+
+.inventory-ui .body-ui .selected-item-ui .item-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: min(calc(100% - 150px), 128px);
+}
+
+.inventory-ui .body-ui .selected-item-ui .back-light-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: min(calc(100% - 75px), 256px);
+    pointer-events: none;
+}
+
+.inventory-ui .items-ui {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 56px);
+    grid-template-rows: repeat(auto-fill, 72px);
+    gap: 4px;
+
+    height: 256px;
+    
+    padding: 16px 32px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+
+.briefing-ui .body-ui .selected-item-ui {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.briefing-ui .items-ui {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 56px);
+    grid-template-rows: repeat(auto-fill, 72px);
+    gap: 4px;
+
+    height: calc(100vh - 148px - 200px);
+    
+    padding: 16px 32px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+.briefing-ui .selected-items-ui {
+    gap: 4px;
+    height: 72px;
+}
+
+
+
+
+
+
+
+
+.tournament-ui .body-ui .top-players-ui {
+    height: 192px;
+}
+
+.tournament-ui .body-ui .players-ui {
+    height: calc(100% - 256px);
+    padding: 0px 32px;
+    overflow-y: auto;
+}
+
+.tournament-ui .body-ui .bottom-ui {
+    height: 128px;
+}
+
+
+
+
+
+.previous-tourney-ui .icon {
+    font-size: 48px;
+}
+
+.previous-tourney-ui .name-text {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+
+
+
+
+.upgrade-ui .combination-ui,
+.tier-up-ui .combination-ui,
+.rarity-up-ui .combination-ui {
+    gap: 8px;
+}
+
+.tier-up-ui .items-ui,
+.rarity-up-ui .items-ui {
+    height: 80px;
+    overflow-x: auto;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.showcase-ui {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #1C1B20;
+    display: none;
+}
+
+.showcase-ui .showcase-content-ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    line-height: 32px;
+}
+
+.showcase-ui .showcase-content-ui .icon-ui {
+    position: relative;
+    width: 256px;
+    height: 256px;
+}
+
+.showcase-ui .showcase-content-ui .icon-ui .back-light-img {
+    width: 256px;
+    height: 256px;
+}
+
+.showcase-ui .showcase-content-ui .icon-ui .item-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 128px;
+    height: 128px;
+}
+
+
+
+
+
+
+.footer-ui {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 48px;
+    background-color: #1C1B20;
+    border-top: #FFF2 1px solid;
+}
+
+.footer-ui .footer-item {
+    flex: 1;
+}
+
+.footer-ui .footer-item button {
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    color: #9F9F9F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer-ui .footer-item .header {
+    color: #E2E2E2;
+}
+
+.footer-ui .footer-item button.active {
+    color: #775CDF;
+}
+
+.footer-ui .footer-item .active .header {
+    color: #B19CFF;
+}
+
+

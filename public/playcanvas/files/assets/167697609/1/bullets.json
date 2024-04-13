@@ -1,0 +1,12 @@
+{
+    "data": [
+        { "id": 166476826, "sprites": [169147673, 169147690, 170999906, 170999923], "name": "Rifle Bullet (Player)", "speed": 14, "time": 0.8571 },
+        { "id": 167769803, "sprites": [169147671, 169147688, 170999902, 170999920], "name": "Shotgun Bullet (Player)", "speed": 12, "time": 1 },
+        { "id": 167769802, "sprites": [169147686, 169147695, 170999916, 170999931], "name": "SMG Bullet (Player)", "speed": 10, "time": 1.2 },
+        { "id": 167844135, "sprites": [169147594, 169147687, 170999879, 170999918], "name": "Pistol Bullet (Player)", "speed": 8, "time": 1.5 },
+        { "id": 167773746, "sprites": [169147672, 169147689, 170999903, 170999921], "name": "Launcher Bullet (Player)", "speed": 6, "time": 2 },
+        { "id": 169191494, "sprites": [169147673, 169147690, 170999906, 170999923], "name": "Sniper Bullet (Player)", "speed": 0, "time": 0.25, "fadeDuration": 0.25 },
+
+        { "id": 170951732, "sprites": [169147671, 169147688, 170999902, 170999920], "name": "Pellet Bullet (Player)", "speed": 12, "time": 1, "isPellet": true }
+    ]
+}

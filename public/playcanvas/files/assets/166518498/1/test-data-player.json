@@ -1,0 +1,7 @@
+{
+    "health": 8,
+    "attack": 1,
+    "speed": 3,
+    "luck": 0.1,
+    "pickRange": 1
+}

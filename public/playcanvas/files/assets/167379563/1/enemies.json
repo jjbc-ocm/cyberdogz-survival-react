@@ -1,0 +1,27 @@
+{
+    "data": [
+        { "id": 171289893, "name": "", "health": 1, "attack": 0.85, "speed": 1.6,     "drops": [{ "id": 166945623, "chance": 0.5 }, { "id": 170344786, "chance": 0.015625 }] },
+        { "id": 171289891, "name": "", "health": 16, "attack": 1.6, "speed": 2,     "drops": [{ "id": 166945623, "chance": 0.55 }, { "id": 170344786, "chance": 0.0625 }] },
+        { "id": 171289890, "name": "", "health": 256, "attack": 13.6, "speed": 2.4,   "drops": [{ "id": 166945623, "chance": 0.6 }, { "id": 170344786, "chance": 0.25 }] },
+        { "id": 171289889, "name": "", "health": 4096, "attack": 205.6, "speed": 2.8, "drops": [{ "id": 166945623, "chance": 0.65 }, { "id": 170344786, "chance":  1 }] },
+
+        { "id": 171289886, "name": "", "health": 2, "attack": 0.9, "speed": 1.2,      "drops": [{ "id": 166945623, "chance": 0.75 }, { "id": 170344786, "chance": 0.015625 }] },
+        { "id": 171289885, "name": "", "health": 32, "attack": 2.4, "speed": 1.5,     "drops": [{ "id": 166945623, "chance": 0.8 }, { "id": 170344786, "chance": 0.0625 }] },
+        { "id": 171289884, "name": "", "health": 512, "attack": 26.4, "speed": 1.8,   "drops": [{ "id": 166945623, "chance": 0.85 }, { "id": 170344786, "chance": 0.25 }] },
+        { "id": 171289883, "name": "", "health": 8192, "attack": 410.4, "speed": 2.1, "drops": [{ "id": 166945623, "chance": 0.9 }, { "id": 170344786, "chance": 1 }] },
+
+        { "id": 169842144, "name": "", "health": 4, "attack": 1, "speed": 1,       "drops": [{ "id": 166945623, "chance": 0.5 }, { "id": 170356527, "chance": 0.25 }, { "id": 170344786, "chance": 0.015625 }] },
+        { "id": 169842145, "name": "", "health": 64, "attack": 4, "speed": 1.25,      "drops": [{ "id": 166945623, "chance": 0.55 }, { "id": 170356527, "chance": 0.3 }, { "id": 170344786, "chance": 0.0625 }] },
+        { "id": 169842146, "name": "", "health": 1024, "attack": 52, "speed": 1.5,   "drops": [{ "id": 166945623, "chance": 0.6 }, { "id": 170356527, "chance": 0.35 }, { "id": 170344786, "chance": 0.25 }] },
+        { "id": 169842147, "name": "", "health": 16384, "attack": 820, "speed": 1.75, "drops": [{ "id": 166945623, "chance": 0.65 }, { "id": 170356527, "chance": 0.4 }, { "id": 170344786, "chance": 1 }] },
+
+        { "id": 170196678, "name": "", "health": 8, "attack": 1.2, "speed": 0.9,        "drops": [{ "id": 166945623, "chance": 0.25 }, { "id": 170356527, "chance": 0.5 }, { "id": 170344786, "chance": 0.015625 }] },
+        { "id": 170196719, "name": "", "health": 128, "attack": 7.2, "speed": 1.125,      "drops": [{ "id": 166945623, "chance": 0.3 }, { "id": 170356527, "chance": 0.55 }, { "id": 170344786, "chance": 0.0625 }] },
+        { "id": 170196722, "name": "", "health": 2048, "attack": 103.2, "speed": 1.35,   "drops": [{ "id": 166945623, "chance": 0.35 }, { "id": 170356527, "chance": 0.6 }, { "id": 170344786, "chance": 0.25 }] },
+        { "id": 170196724, "name": "", "health": 32768, "attack": 1639.2, "speed": 1.575, "drops": [{ "id": 166945623, "chance": 0.4 }, { "id": 170356527, "chance": 0.65 }, { "id": 170344786, "chance": 1 }] },
+
+
+
+        { "id": 174261998, "name": "", "health": 1600, "attack": 1.6, "speed": 4, "drops": [] }
+    ]
+}

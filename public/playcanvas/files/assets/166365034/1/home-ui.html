@@ -1,0 +1,512 @@
+
+<div class="main-ui">
+
+    <img id="map-intro-img" class="map-intro-img">
+
+
+
+
+
+    <div id="topbar-ui" class="topbar-ui">
+        <ul class="stats-ui">
+            <li class="stat-ui">
+                <!-- <button class="round-button add-button"><i class="fa fa-plus"></i></button> -->
+                <div id="kibblez-text">0 KIBBLEZ</div>
+            </li>
+            <li class="stat-ui">
+                <!-- <button class="round-button add-button"><i class="fa fa-plus"></i></button> -->
+                <div id="cbz-text">0 CBZ</div>
+            </li>
+        </ul>
+        <div id="name-text" class="field-ui">---</div>
+        <div id="wallet-id-text" class="field-ui"></div>
+    </div>
+
+    
+
+    <ul class="side-left-buttons">
+        <li>
+            <button id="leaderboards-button" class="round-button">
+                <i class="fa-solid fa-medal"></i>
+                <div class="round-button-label">SCORES</div>
+            </button>
+        </li>
+        <li>
+            <button id="tournament-button" class="round-button">
+                <i class="fa fa-trophy"></i>
+                <div class="round-button-label">TOURNEY</div>
+            </button>
+        </li>
+    </ul>
+    
+    
+
+
+    <div class="high-score-ui">
+        <div class="header">HIGH SCORE</div>
+        <div id="high-score-text" class="value">---</div>
+    </div>
+    <button id="play-button" class="play-button">
+        <div>BATTLE</div>
+    </button>
+
+
+
+
+
+
+
+    <div id="inventory-ui" class="fullscreen-ui inventory-ui">
+        <div class="body-ui">
+            <div class="selected-item-ui">
+                <div id="visibility-ui" class="visibility-ui">
+                    <div class="top-side-ui">
+                        <div id="name-text" class="name-text">Weapon Name</div>
+                        <div id="level-text" class="level-text">Lv. 9 / 999</div>
+                        <div id="tier-ui">
+                        </div>
+                    </div>
+                    <div class="left-side-ui">
+                        <div><i class="fa fa-fire" aria-hidden="true"></i>&nbsp;&nbsp;<span id="damage-text">9,999</span></div>
+                        <div><i class="fa fa-spinner" aria-hidden="true"></i>&nbsp;&nbsp;<span id="fire-rate-text">9.99/s</span></div>
+                        <!-- <div><i class="fa fa-bolt" aria-hidden="true"></i>&nbsp;&nbsp;<span id="speed-text">9.99/s</span></div> -->
+                    </div>
+                    <div class="right-side-ui">
+                        <button id="upgrade-button" class="round-button">
+                            <i class="fa-solid fa-chess-pawn"></i>
+                            <div class="round-button-label">BOOST</div>
+                        </button>
+                        <button id="tier-button" class="round-button">
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            <div class="round-button-label">EXPAND</div>
+                        </button>
+                        <button id="rarity-button" class="round-button">
+                            <i class="fa-solid fa-crown"></i>
+                            <div class="round-button-label">REFINE</div>
+                        </button>
+                    </div>
+                    <img id="back-light-img" class="back-light-img">
+                    <img id="item-img" class="item-img">
+                </div>
+            </div>
+            <div class="width-100">
+                <ul id="items" class="items-ui">
+                </ul>
+            </div>
+        </div>
+        <ul class="app-bar">
+            <li class="row-content-ui">
+                <ul>
+                    <li>
+                        <button id="back-button" class="icon-button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        Inventory
+                    </li>
+                </ul>
+            </li>
+            <li class="row-content-ui">
+                <ul id="tabs-ui" class="tabs-ui">
+                    <li id="tab-0" class="flex-1 tab-selected-ui">Weapons</li>
+                    <li id="tab-1" class="flex-1 tab-default-ui">Accessories</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    
+
+
+
+
+
+
+    <div id="leaderboards-ui" class="fullscreen-ui">
+        <ul id="items" class="leaderboard-items-ui">
+        </ul>
+        <ul class="app-bar">
+            <li class="row-content-ui">
+                <ul>
+                    <li>
+                        <button id="back-button" class="icon-button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        Leaderboards
+                    </li>
+                </ul>
+            </li>
+            <li class="row-content-ui">
+                <ul id="tabs-ui" class="tabs-ui">
+                    <li id="tab-0" class="flex-1 tab-selected-ui">All Time</li>
+                    <li id="tab-1" class="flex-1 tab-default-ui">Weekly</li>
+                    <li id="tab-2" class="flex-1 tab-default-ui">Daily</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="tournament-ui" class="tournament-ui fullscreen-ui">
+        <div class="body-ui">
+            <div class="top-players-ui">
+                <div id="time-text">00:00:00</div>
+            </div>
+            <div class="players-ui">
+                <ul id="items">
+                </ul>
+            </div>
+            <div class="bottom-ui">
+                <button id="join-button">Join</button>
+                <button id="battle-button">Battle</button>
+            </div>
+        </div>
+        <ul class="app-bar">
+            <li class="row-content-ui">
+                <ul>
+                    <li>
+                        <button id="back-button" class="icon-button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        Tournament
+                    </li>
+                </ul>
+            </li>
+            <li class="row-content-ui">
+                <ul id="tabs-ui" class="tabs-ui">
+                    <li id="tab-0" class="flex-1 tab-selected-ui">Free</li>
+                    <li id="tab-1" class="flex-1 tab-default-ui">Premium</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="briefing-ui" class="fullscreen-ui briefing-ui">
+        <div class="body-ui">
+            <div class="selected-item-ui">
+                <div>&nbsp;</div>
+                <div id="selected-text">Selected: 0 / 4</div>
+                <div>&nbsp;</div>
+                <div id="selected-items-ui">
+                    <ul id="selected-items" class="selected-items-ui">
+                    </ul>
+                </div>
+                <div>&nbsp;</div>
+                <button id="battle-button" disabled>Battle</button>
+            </div>
+            <div class="width-100">
+                <div style="padding-top:16px">Choose weapons</div>
+                <ul id="items" class="items-ui">
+                </ul>
+            </div>
+        </div>
+        <ul class="app-bar">
+            <li class="row-content-ui">
+                <ul>
+                    <li>
+                        <button id="back-button" class="icon-button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </li>
+                    <li class="flex-1">
+                        Preparation
+                    </li>
+                </ul>
+            </li>
+            <li class="row-content-ui">
+                <ul id="tabs-ui" class="tabs-ui">
+                    <li id="tab-0" class="flex-1 tab-selected-ui">Weapons</li>
+                    <li id="tab-1" class="flex-1 tab-default-ui">Accessories</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="previous-tourney-ui" class="modal-ui previous-tourney-ui">
+        <div class="body-ui">
+            <div class="header-ui">
+                Tournament Results
+            </div>
+            <div class="main-content-ui">
+                <div class="icon"><i class="fa-solid fa-trophy"></i></div>
+                <div id="name-text" class="name-text"></div>
+                <div id="rank-text" class="rank-text"></div>
+                <div>&nbsp;</div>
+                <button id="confirm-button">+1000 CBZ</button>
+                <!-- <button id="close-button">Back</button> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="upgrade-ui" class="upgrade-ui modal-ui">
+        <div class="body-ui">
+            <div class="header-ui">
+                Boost Item
+                <button id="close-button" class="icon-button close-button">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="main-content-ui">
+                <ul class="combination-ui">
+                    <li id="main-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </li>
+                    <li id="result-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                </ul>
+                <div>&nbsp;</div>
+                <div id="slider-text">Use 9999 KIBBLEZ</div>
+                <input id="exp-slider" class="slider" type="range" min="0" max="100" >
+                <div>&nbsp;</div>
+                <button id="confirm-button">+9999 EXP</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="tier-up-ui" class="tier-up-ui modal-ui">
+        <div class="body-ui">
+            <div class="header-ui">
+                Expand Weapon
+                <button id="close-button" class="icon-button close-button">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="main-content-ui">
+                <ul class="combination-ui">
+                    <li id="main-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
+                    </li>
+                    <li id="sub-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-equals"></i>
+                    </li>
+                    <li id="result-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                </ul>
+                <div>&nbsp;</div>
+                <div>Select item to merge</div>
+                <ul id="items" class="items-ui">
+                </ul>
+                <div>&nbsp;</div>
+                <button id="confirm-button">Merge</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="rarity-up-ui" class="rarity-up-ui modal-ui">
+        <div class="body-ui">
+            <div class="header-ui">
+                Refine Weapon
+                <button id="close-button" class="icon-button close-button">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="main-content-ui">
+                <ul class="combination-ui">
+                    <li id="main-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
+                    </li>
+                    <li id="sub-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-equals"></i>
+                    </li>
+                    <li id="result-item-ui" class="item-ui">
+                        <div id="content-ui" class="content-ui">
+                            <img id="item-img" class="item-img" />
+                            <div id="level-text" class="level-text"></div>
+                        </div>
+                        <div id="tier-ui" class="tier-ui">
+                        </div>
+                    </li>
+                </ul>
+                <div>&nbsp;</div>
+                <div>Select item to merge</div>
+                <ul id="items" class="items-ui">
+                </ul>
+                <div>&nbsp;</div>
+                <button id="confirm-button">Merge</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul id="footer-ui" class="footer-ui">
+        <li class="footer-item">
+            <button id="profile-button">
+                <i class="fa fa-user value"></i>
+                <div class="header">Profile</div>
+            </button>
+        </li>
+        <li class="footer-item">
+            <button id="items-button">
+                <i class="fa fa-archive value"></i>
+                <div class="header">Items</div>
+            </button>
+        </li>
+        <li class="footer-item">
+            <button id="home-button">
+                <i class="fa fa-paw value"></i>
+                <div class="header">Play</div>
+            </button>
+        </li>
+        <li class="footer-item">
+            <button id="swap-button">
+                <i class="fa fa-arrows-h value"></i>
+                <div class="header">Swap</div>
+            </button>
+        </li>
+        <li class="footer-item">
+            <button id="help-button">
+                <i class="fa fa-question value"></i>
+                <div class="header">Help</div>
+            </button>
+        </li>
+    </ul>
+
+    
+
+    <div id="showcase-ui" class="showcase-ui">
+        <div class="showcase-content-ui">
+            <div class="icon-ui">
+                <img id="back-light-img" class="back-light-img">
+                <img id="item-img" class="item-img">
+            </div>
+            <div id="name-text" class="name-text">Weapon Name</div>
+            <div id="level-text" class="level-text">Lv. 9 / 999</div>
+            <div id="tier-ui">
+            </div>
+            <div><i class="fa fa-fire" aria-hidden="true"></i>&nbsp;&nbsp;<span id="damage-text">9,999</span></div>
+            <div><i class="fa fa-spinner" aria-hidden="true"></i>&nbsp;&nbsp;<span id="fire-rate-text">9.99/s</span></div>
+            <div>&nbsp;</div>
+            <div>TAP ANYWHERE TO CONTINUE</div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="loading-ui" class="loading-ui">
+        <div class="content-ui">
+            <i class="spinner-ui fa-solid fa-atom"></i>
+            <div>Loading...</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+{
+    "info": [
+        { "id": "pass_through", "desc": "Make bullet pass through all enemies." },
+        { "id": "screen_boomerang", "desc": "Make bullet bounce at the edges of the screen." },
+        { "id": "pellets", "desc": "Make bullet explode into multiple pellets upon impact." },
+        { "id": "homing", "desc": "Make bullet target the nearest enemy." },
+        { "id": "360_shot", "desc": "Spread bullets around the player." },
+        { "id": "damage_rate", "desc": "Increase damage dealt by 100% of weapon's base value." },
+        { "id": "fire_rate", "desc": "Increase fire rate by 100% of weapon's base value." },
+        { "id": "bullet_speed", "desc": "Increase bullet speed." },
+        { "id": "bullet_duration", "desc": "Increase bullet duration." },
+        { "id": "bullet_size", "desc": "Increase bullet size." },
+        { "id": "bullet_count", "desc": "Increase bullet count on single fire in a spread direction." },
+        { "id": "barrel_count", "desc": "Increase bullet count on single fire in a parallel direction." },
+        { "id": "barrage_count", "desc": "Fire additional follow-up bullet every affer fire." }
+    ],
+    "data": [
+        {
+            "icon": 170325327,
+            "name": "Score Boost",
+            "info": "Add 5% score multipler at the end of the game.",
+            "conditions": [],
+            "effects": [
+                { "keys": ["upgrades", "score_boost"], "add": 1 }
+            ]
+        },
+        {
+            "icon": 173405701,
+            "name": "Health Boost",
+            "info": "Increase max health by 50% of base value.",
+            "conditions": [],
+            "effects": [
+                { "keys": ["upgrades", "max_health"], "add": 1 }
+            ]
+        },
+        {
+            "icon": 173405701,
+            "name": "Regeneration",
+            "info": "Add health regeneration rate of 0.25/s.",
+            "conditions": [],
+            "effects": [
+                { "keys": ["upgrades", "regenerate"], "add": 1 }
+            ]
+        },
+        {
+            "icon": 173405968,
+            "name": "Speed Boost",
+            "info": "Increase movement speed by 25% of base value.",
+            "conditions": [],
+            "effects": [
+                { "keys": ["upgrades", "speed"], "add": 1 }
+            ]
+        },
+        {
+            "icon": 173405967,
+            "name": "Pick Range Boost",
+            "info": "Increase pick range by 50% of base value.",
+            "conditions": [],
+            "effects": [
+                { "keys": ["upgrades", "pick_range"], "add": 1 }
+            ]
+        },
+        {
+            "icon": 173405700,
+            "name": "Surge Gain Boost",
+            "info": "Increase surge gained by 25% of base value.",
+            "conditions": [],
+            "effects": [
+                { "keys": ["upgrades", "surge_gain"], "add": 1 }
+            ]
+        },
+
+
+
+
+
+
+
+
+
+        {
+            "isWeaponUpgrade": true,
+            "getIcon": "weapon.data.iconId",
+            "getName": "`Unlock ${weapon.data.name}`", 
+            "getInfo": "`Unlocks ${weapon.data.name}.`", 
+            "conditions": [
+                { "keys": ["isUnlocked"], "value": false }
+            ],
+            "effects": [
+                { "keys": ["isUnlocked"], "value": true }
+            ] 
+        },
+
+        {
+            "isWeaponUpgrade": true,
+            "getIcon": "weapon.data.iconId",
+            "getName": "`${weapon.data.name} Level ${weapon.level + 1}`",
+            "getInfo": "DataManager.instance.getUpgradeInfo(Object.keys(weapon.data.upgradesPerLevel[weapon.level])[0]).desc",
+            "conditions": [
+                { "keys": ["isUnlocked"], "value": true },
+                { "keys": ["level"], "operator": "<", "value": 8 }
+            ],
+            "setEffects": [
+                "player.upgradeWeapon(weapon)"
+            ]
+        }
+
+    ]
+}
