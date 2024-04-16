@@ -6,11 +6,28 @@ import './App.css';
 import PlayCanvasApp from './components/PlayCanvasApp';
 import { ConnectionProvider, WalletProvider, useWallet } from "@solana/wallet-adapter-react";
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton, useWalletModal } from "@solana/wallet-adapter-react-ui";
-import { PhantomWalletAdapter, SolflareWalletAdapter } from "@solana/wallet-adapter-wallets";
+import { PhantomWalletAdapter, SolflareWalletAdapter, } from "@solana/wallet-adapter-wallets";
+import { SolanaMobileWalletAdapter, createDefaultAddressSelector, createDefaultAuthorizationResultCache, createDefaultWalletNotFoundHandler } from "@solana-mobile/wallet-adapter-mobile";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+
 
 function App() {
   const endpoint = "https://red-late-lake.solana-mainnet.quiknode.pro/f88a154e7f97b1f789a0a1fd45c4ab48fa3f21ff/";
-  const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter()], []);
+  const wallets = useMemo(() => [
+    new PhantomWalletAdapter(), 
+    new SolflareWalletAdapter(),
+    new SolanaMobileWalletAdapter({
+      addressSelector: createDefaultAddressSelector(),
+      appIdentity: {
+          name: 'Cyberdogz: Survival',
+          uri: 'https://cyberdogz-survival.netlify.app/',
+          icon: 'relative/path/to/icon.png',
+      },
+      authorizationResultCache: createDefaultAuthorizationResultCache(),
+      cluster: WalletAdapterNetwork.Devnet,
+      onWalletNotFound: createDefaultWalletNotFoundHandler(),
+    })
+  ], []);
 
   return (
     <ConnectionProvider endpoint={endpoint}>

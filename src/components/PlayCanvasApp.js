@@ -6,40 +6,34 @@ import { TOKEN_PROGRAM_ID, createTransferCheckedInstruction, getAssociatedTokenA
 import { PhantomWalletAdapter, PhantomWalletName } from '@solana/wallet-adapter-wallets';
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton, useWalletModal } from '@solana/wallet-adapter-react-ui';
 
+
+
 const PlayCanvasApp = forwardRef((wallets, props) => {
   const endpoint = "https://red-late-lake.solana-mainnet.quiknode.pro/f88a154e7f97b1f789a0a1fd45c4ab48fa3f21ff/";
 
   const iframeRef = useRef(null);
   const [isInitialized, setInitialized] = useState(false);
   const [isOpenSelectWalletModal, setOpenSelectWalletModal] = useState(false);
+  const [isSendToken, setSendToken] = useState(false);
 
   const wallet = useWallet();
   const modal = useWalletModal();
 
   useEffect(() => {
-    if (!isInitialized) {
-      wallet.disconnect();
-      // wallet.wallet = null;
-      setInitialized(true);
-    }
-    
-  }, [isInitialized]); 
+    wallet.disconnect();
+    setInitialized(true);
+  }, []); 
 
   // Called when publicKey value has been updated
   useEffect(() => {
     if (wallet.publicKey) {
-      console.log('CONNECTED', wallet.publicKey.toString());
       sendMessageToPlayCanvas('login_success', wallet.publicKey.toString());
     }
   }, [wallet.publicKey]);
 
-  useEffect(() => {
-    console.log('heeet', wallet.connected)
-}, [wallet.connected]);
-
-useEffect(() => {
-  console.log('walllet', wallet.wallet)
-}, [wallet.wallet]);
+// useEffect(() => {
+//   console.log('wallet changed check', wallet, wallet.wallet)
+// }, [wallet.wallet]);
 
 
   // Called when player is done selecting a target wallet
@@ -54,7 +48,7 @@ useEffect(() => {
         sendMessageToPlayCanvas('login_failed', 'error');
       }
     };
-    if (isOpenSelectWalletModal && wallet.wallet && wallet.wallet.readyState === "Installed") {
+    if (isInitialized && isOpenSelectWalletModal && wallet.wallet) {
       console.log('Attempting to connect wallet ', wallet.wallet);
       connectWallet();
     }
@@ -62,20 +56,24 @@ useEffect(() => {
 
   // Handle all message received from playcanvas
   useEffect(() => {
+    console.log("message receiver useEffect", wallet);
+
     const handleReceiveMessage = event => {
       if (event.data.type === 'login') {
         openSelectWalletModal();
       }
 
       if (event.data.type === 'pay_token') {
-        payToken(event.data.payload);
+        console.log(wallet);
+        // payToken(event.data.payload);
+        setSendToken(true);
       }
     };
     window.addEventListener('message', handleReceiveMessage);
     return () => {
       window.removeEventListener('message', handleReceiveMessage);
     };
-  }, []);
+  }, [wallet]);
   
 
 
@@ -97,67 +95,13 @@ useEffect(() => {
 
 
 
-  // const payToken = async (amount) => {console.log(typeof wallet.publicKey.equals);
-  //   try {
-  //     const fromWalletAddress = wallet.publicKey;
-  //     const toWalletAddress = new PublicKey('F6CZz6P3qAQgjF9Sdt138yK8gthmd9d9RUAhmsufhHq2');
-  //     const tokenMintAddress = new PublicKey('G4USAGAtyEfW6B5abRRNHnvn1x2Vhcxhfvdv2h3m24iW');
-  //     const connection = new Connection(endpoint, 'confirmed');
-    
-  //     // Get the associated token addresses for the sender and receiver
-  //     // console.log(wallet, toWalletAddressStr, amount);
-  //     const fromTokenAccount = await getAssociatedTokenAddress(tokenMintAddress, fromWalletAddress);
-  //     const toTokenAccount = await getAssociatedTokenAddress(tokenMintAddress, toWalletAddress);
-    
-  //     // Create the transfer instruction
-  //     const transferInstruction = createTransferCheckedInstruction(
-  //       fromTokenAccount,
-  //       toTokenAccount,
-  //       fromWalletAddress,
-  //       amount * LAMPORTS_PER_SOL,
-  //       [],
-  //       TOKEN_PROGRAM_ID
-  //     );
-    
-  //     // Create a transaction
-  //     let transaction = new Transaction().add(transferInstruction);
-    
-  //     // Fetch the latest blockhash
-  //     const { blockhash } = await connection.getLatestBlockhash();
-  //     transaction.recentBlockhash = blockhash;
-  //     transaction.feePayer = fromWalletAddress;
-
-  //     console.log(transaction);
-    
-  //     // Have the wallet sign the transaction
-  //     const signedTransaction = await wallet.signTransaction(transaction);
-    
-  //     // Send the transaction
-  //     const rawTransaction = signedTransaction.serialize();
-  //     const signature = await connection.sendRawTransaction(rawTransaction, {
-  //       skipPreflight: false,
-  //       preflightCommitment: "finalized",
-  //     });
-    
-  //     console.log("Transaction successful with signature:", signature);
-
-  //     sendMessageToPlayCanvas('pay_success', signature);
-  //   } catch (error) {
-  //     console.error("Error during signing:", error);
-  //     if (error instanceof Error) {
-  //       console.error("Error message:", error.message);
-  //       console.error("Error stack:", error.stack);
-  //     }
-  //     sendMessageToPlayCanvas('pay_failed', 'error');
-  //   }
-  // };
-
 
 
 
   const payToken = async (amount) => {
+    console.log(wallet.wallet, wallet.publicKey)
     try {
-      const fromWalletAddress = wallet.publicKey;
+      const fromWalletAddress = new PublicKey(wallet.publicKey);
       const toWalletAddress = new PublicKey('F6CZz6P3qAQgjF9Sdt138yK8gthmd9d9RUAhmsufhHq2');
       const tokenMintAddress = new PublicKey('G4USAGAtyEfW6B5abRRNHnvn1x2Vhcxhfvdv2h3m24iW');
       const connection = new Connection(endpoint, 'confirmed');
@@ -198,10 +142,18 @@ useEffect(() => {
 
       // Have the wallet sign the transaction
       const signedTransaction = await wallet.signTransaction(transaction);
+
+      console.log("Transaction signed");
     
       // Send the transaction
       const rawTransaction = signedTransaction.serialize();
       const signature = await connection.sendRawTransaction(rawTransaction);
+
+      console.log("Transaction sent");
+
+      setSendToken(false);
+      
+      console.log("Transaction waiting for confirmation:", signature);
 
       const strategy = {
         commitment: 'confirmed',
@@ -261,8 +213,29 @@ useEffect(() => {
   return (
     <div className='App'>
       <iframe ref={iframeRef} src="/playcanvas/index.html" style={{ width: '100%', height: '100vh' }} frameBorder="0"></iframe>
-      <button onClick={() => payToken(1)}>TEST PAY</button>
+      <button 
+        class="wallet-adapter-button wallet-adapter-button-trigger" 
+        // style={{
+        //   position: 'absolute',
+        //   left: '50%',
+        //   top: '50%',
+        //   transform: 'translate(-50%, -50%)'
+        // }}
+        onClick={() => payToken(1)}>
+          TEST PAY
+      </button>
       <button onClick={() => fetchAndLogBalance()}>SEE TOKEN</button>
+      {isSendToken ? 
+        <button 
+          class="wallet-adapter-button wallet-adapter-button-trigger" 
+          style={{
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+          onClick={() => payToken(1)}>Pay Registration Fee</button> 
+      : null}
       </div>
     // <WalletContext.Provider value={{ transferToken }}>
     // </WalletContext.Provider>
