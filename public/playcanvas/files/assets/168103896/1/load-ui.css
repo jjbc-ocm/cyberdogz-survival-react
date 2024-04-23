@@ -1,18 +1,5 @@
 
-.title-img {
-    position: absolute;
-    width: 80%;
-    top: 100px;
-    transform: translateX(-50%);
-}
 
-.game-title {
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translate(-50%, -10%);
-    width: 100%;
-}
 
 .field-info {
     text-align: left;
@@ -127,4 +114,57 @@
 
 .footer-ui .apple-button {
     background: #000000;
+}
+
+
+
+.title-img {
+    width: 100%;
+}
+
+
+.load-ui {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 12px;
+}
+
+.load-ui .phantom-button {
+    width: 200px;
+}
+
+.load-ui .guest-button {
+    background: linear-gradient(to bottom, #9747FF55 0%, #775CDF55 100%);
+    border: #9747FF 2px solid;
+    width: 200px;
+}
+
+
+
+
+
+.auth-ui {
+    display: none;
+}
+
+.auth-ui .content-ui {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 12px;
+}
+
+.auth-ui .google-button {
+    background: #4285F4;
 }

@@ -6,16 +6,14 @@ import './App.css';
 import PlayCanvasApp from './components/PlayCanvasApp';
 import { ConnectionProvider, WalletProvider, useWallet } from "@solana/wallet-adapter-react";
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton, useWalletModal } from "@solana/wallet-adapter-react-ui";
-import { PhantomWalletAdapter, SolflareWalletAdapter, } from "@solana/wallet-adapter-wallets";
+import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { SolanaMobileWalletAdapter, createDefaultAddressSelector, createDefaultAuthorizationResultCache, createDefaultWalletNotFoundHandler } from "@solana-mobile/wallet-adapter-mobile";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
 
 function App() {
-  const endpoint = "https://red-late-lake.solana-mainnet.quiknode.pro/f88a154e7f97b1f789a0a1fd45c4ab48fa3f21ff/";
+  const endpoint = "https://api.devnet.solana.com";//"https://red-late-lake.solana-mainnet.quiknode.pro/f88a154e7f97b1f789a0a1fd45c4ab48fa3f21ff/";
   const wallets = useMemo(() => [
-    new PhantomWalletAdapter(), 
-    new SolflareWalletAdapter(),
     new SolanaMobileWalletAdapter({
       addressSelector: createDefaultAddressSelector(),
       appIdentity: {
@@ -26,7 +24,8 @@ function App() {
       authorizationResultCache: createDefaultAuthorizationResultCache(),
       cluster: WalletAdapterNetwork.Devnet,
       onWalletNotFound: createDefaultWalletNotFoundHandler(),
-    })
+    }),
+    new PhantomWalletAdapter()
   ], []);
 
   return (
@@ -34,8 +33,8 @@ function App() {
       <WalletProvider wallets={wallets}>
         <WalletModalProvider>
           <PlayCanvasApp wallets={wallets} />
-          <WalletMultiButton />
-          <WalletDisconnectButton />
+          {/* <WalletMultiButton /> */}
+          {/* <WalletDisconnectButton />   */}
           {/* <Implementation1 /> */}
           {/* <Implementation2 /> */}
         </WalletModalProvider>
