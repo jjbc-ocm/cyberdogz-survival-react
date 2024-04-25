@@ -9,6 +9,7 @@ import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton, useWall
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { SolanaMobileWalletAdapter, createDefaultAddressSelector, createDefaultAuthorizationResultCache, createDefaultWalletNotFoundHandler } from "@solana-mobile/wallet-adapter-mobile";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import { SwapWidget } from "@uniswap/widgets";
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
       <WalletProvider wallets={wallets}>
         <WalletModalProvider>
           <PlayCanvasApp wallets={wallets} />
+          {/* <div className="Uniswap">
+            <SwapWidget />
+          </div> */}
           {/* <WalletMultiButton /> */}
           {/* <WalletDisconnectButton />   */}
           {/* <Implementation1 /> */}

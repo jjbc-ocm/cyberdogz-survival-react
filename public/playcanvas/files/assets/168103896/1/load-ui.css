@@ -140,8 +140,8 @@
 }
 
 .load-ui .guest-button {
-    background: linear-gradient(to bottom, #9747FF55 0%, #775CDF55 100%);
-    border: #9747FF 2px solid;
+    /* background: linear-gradient(to bottom, #9747FF55 0%, #775CDF55 100%);
+    border: #9747FF 2px solid; */
     width: 200px;
 }
 

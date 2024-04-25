@@ -45,23 +45,25 @@
     flex-direction: column;
     align-content: flex-start;
     top: 16px;
-    left: 48px;
+    left: 16px;
     gap: 4px;
+    align-items: start;
 }
 
 .top-ui .stat-ui {
     position: relative;
-    padding: 3px 24px;
-    background-color: #111A;
-    border-radius: 12px;
+    padding: 4px;
+    /* padding: 3px 24px; */
+    /* background-color: #111A;
+    border-radius: 12px; */
 }
 
-.top-ui .stat-ui .icon {
+/* .top-ui .stat-ui .icon {
     position: absolute;
     width: 32px;
     left: -40px;
     top: -4px;
-}
+} */
 
 .top-ui .icon-button {
     position: absolute;
@@ -229,6 +231,9 @@
     padding-top: 100px;
 }
 
+.bottom-ui button {
+    width: 150px;
+}
 
 
 
