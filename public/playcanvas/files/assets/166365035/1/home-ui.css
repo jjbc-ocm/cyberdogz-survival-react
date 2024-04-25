@@ -411,6 +411,17 @@
 
 
 
+.network-error-ui .icon {
+    font-size: 48px;
+}
+
+.network-error-ui .details-text {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+
 
 
 
