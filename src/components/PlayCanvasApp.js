@@ -195,19 +195,19 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
   };
 
 
-  // const claimToken = async(amount) => {
-  //   const message = new TextEncoder().encode(receiveTokenPayload.message);
-  //   try {
-  //     const signature = await wallet.signMessage(message);
-  //     setReceiveTokenPayload({
-  //       isActive: false
-  //     });
-  //     sendMessageToPlayCanvas('sign_success', encode(signature));
-  //   } catch (error) {
-  //     console.error(error);
-  //     sendMessageToPlayCanvas('sign_failed', 'error');
-  //   }
-  // }
+  const claimToken = async(amount) => {
+    const message = new TextEncoder().encode(receiveTokenPayload.message);
+    try {
+      const signature = await wallet.signMessage(message);
+      setReceiveTokenPayload({
+        isActive: false
+      });
+      sendMessageToPlayCanvas('sign_success', encode(signature));
+    } catch (error) {
+      console.error(error);
+      sendMessageToPlayCanvas('sign_failed', 'error');
+    }
+  }
 
 
   const fetchAndLogBalance = async () => {
