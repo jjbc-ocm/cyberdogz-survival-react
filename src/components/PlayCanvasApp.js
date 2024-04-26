@@ -5,7 +5,7 @@ import { Connection, LAMPORTS_PER_SOL, PublicKey, Transaction, TransactionInstru
 import { TOKEN_PROGRAM_ID, createTransferCheckedInstruction, getAssociatedTokenAddress } from '@solana/spl-token';
 import { PhantomWalletAdapter, PhantomWalletName } from '@solana/wallet-adapter-wallets';
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton, useWalletModal } from '@solana/wallet-adapter-react-ui';
-
+import { encode } from 'bs58';
 
 
 const PlayCanvasApp = forwardRef((wallets, props) => {
@@ -14,7 +14,15 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
   const iframeRef = useRef(null);
   const [isInitialized, setInitialized] = useState(false);
   const [isOpenSelectWalletModal, setOpenSelectWalletModal] = useState(false);
-  const [isSendToken, setSendToken] = useState(false);
+  const [sendTokenPayload, setSendTokenPayload] = useState({
+    isActive: false,
+    amount: 0
+  });
+  const [receiveTokenPayload, setReceiveTokenPayload] = useState({
+    isActive: false,
+    message: null,
+    amount: 0
+  });
 
   const wallet = useWallet();
   const modal = useWalletModal();
@@ -64,9 +72,19 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
       }
 
       if (event.data.type === 'pay_token') {
-        console.log(wallet);
-        // payToken(event.data.payload);
-        setSendToken(true);
+        setSendTokenPayload({
+          isActive: true,
+          amount: event.data.payload
+        });
+      }
+
+      if (event.data.type === 'receive_token') {
+        console.log('received receive_token', event.data.payload);
+        setReceiveTokenPayload({
+          isActive: true,
+          message: event.data.payload.message,
+          amount: event.data.payload.amount
+        });
       }
     };
     window.addEventListener('message', handleReceiveMessage);
@@ -103,6 +121,7 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
     try {
       const fromWalletAddress = new PublicKey(wallet.publicKey);
       const toWalletAddress = new PublicKey('F6CZz6P3qAQgjF9Sdt138yK8gthmd9d9RUAhmsufhHq2');
+      //const toWalletAddress = new PublicKey('5cog2CULu9HQhH2vC51Qwpdhp2LoQiAGd8VwGi36C8s7'); // New
       const tokenMintAddress = new PublicKey('G4USAGAtyEfW6B5abRRNHnvn1x2Vhcxhfvdv2h3m24iW');
       const connection = new Connection(endpoint, 'confirmed');
       
@@ -151,7 +170,7 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
 
       console.log("Transaction sent");
 
-      setSendToken(false);
+      setSendTokenPayload({ isActive: false, amount: 0 });
       
       console.log("Transaction waiting for confirmation:", signature);
 
@@ -174,6 +193,21 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
       sendMessageToPlayCanvas('pay_failed', 'error');
     }
   };
+
+
+  // const claimToken = async(amount) => {
+  //   const message = new TextEncoder().encode(receiveTokenPayload.message);
+  //   try {
+  //     const signature = await wallet.signMessage(message);
+  //     setReceiveTokenPayload({
+  //       isActive: false
+  //     });
+  //     sendMessageToPlayCanvas('sign_success', encode(signature));
+  //   } catch (error) {
+  //     console.error(error);
+  //     sendMessageToPlayCanvas('sign_failed', 'error');
+  //   }
+  // }
 
 
   const fetchAndLogBalance = async () => {
@@ -213,7 +247,7 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
   return (
     <div className='App'>
       <iframe ref={iframeRef} src="/playcanvas/index.html" style={{ width: '100%', height: '100vh' }} frameBorder="0"></iframe>
-      <button 
+      {/* <button 
         class="wallet-adapter-button wallet-adapter-button-trigger" 
         // style={{
         //   position: 'absolute',
@@ -223,9 +257,9 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
         // }}
         onClick={() => payToken(1)}>
           TEST PAY
-      </button>
-      <button onClick={() => fetchAndLogBalance()}>SEE TOKEN</button>
-      {isSendToken ? 
+      </button> */}
+      {/* <button onClick={() => fetchAndLogBalance()}>SEE TOKEN</button> */}
+      {sendTokenPayload.isActive ? 
         <button 
           class="wallet-adapter-button wallet-adapter-button-trigger" 
           style={{
@@ -234,7 +268,18 @@ const PlayCanvasApp = forwardRef((wallets, props) => {
             top: '50%',
             transform: 'translate(-50%, -50%)'
           }}
-          onClick={() => payToken(1)}>Pay Registration Fee</button> 
+          onClick={() => payToken(sendTokenPayload.amount)}>Pay {sendTokenPayload.amount} CBZ</button> 
+      : null}
+      {receiveTokenPayload.isActive ?
+        <button 
+          class="wallet-adapter-button wallet-adapter-button-trigger" 
+          style={{
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+          onClick={() => claimToken(receiveTokenPayload.amount)}>Claim {receiveTokenPayload.amount} CBZ</button> 
       : null}
       </div>
     // <WalletContext.Provider value={{ transferToken }}>

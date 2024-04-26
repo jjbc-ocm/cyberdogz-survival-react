@@ -15,7 +15,7 @@ function App() {
   const endpoint = "https://red-late-lake.solana-mainnet.quiknode.pro/f88a154e7f97b1f789a0a1fd45c4ab48fa3f21ff/";
   const wallets = useMemo(() => [
     new PhantomWalletAdapter(), 
-    new SolflareWalletAdapter(),
+    // new SolflareWalletAdapter(),
     new SolanaMobileWalletAdapter({
       addressSelector: createDefaultAddressSelector(),
       appIdentity: {

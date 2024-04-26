@@ -111,8 +111,8 @@ opacity: 0.5;
 } */
 
 .secondary-button {
-  border: 1px #9747FF solid;
-  background: none;
+  background: linear-gradient(to bottom, #9747FF55 0%, #775CDF55 100%);
+  border: #9747FF 2px solid;
 }
 
 .icon-button {
